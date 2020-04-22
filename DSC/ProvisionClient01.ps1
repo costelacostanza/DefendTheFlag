@@ -213,7 +213,11 @@ Configuration SetupAipScannerCore
         xRemoteFile DownloadBginfo
 		{
 			DestinationPath = 'C:\BgInfo\BgInfoConfig.bgi'
+<<<<<<< HEAD
 			Uri = "https://github.com/humestc/DefendTheFlag/raw/$Branch/Downloads/BgInfo/aippc.bgi"
+=======
+			Uri = "https://github.com/humestc/DefendTheFlag/raw/master/Downloads/BgInfo/aippc.bgi"
+>>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
             DependsOn = '[Computer]JoinDomain'
 		}
         
@@ -393,7 +397,11 @@ Configuration SetupAipScannerCore
         # xRemoteFile DownloadAipClient
 		# {
 		# 	DestinationPath = 'C:\LabData\aip_client.msi'
+<<<<<<< HEAD
 		# 	Uri = "https://github.com/humestc/DefendTheFlag/raw/$Branch/Downloads/AIP/Client/AzInfoProtection_UL_Preview_MSI_for_central_deployment.msi"
+=======
+		# 	Uri = "https://github.com/humestc/DefendTheFlag/raw/master/Downloads/AIP/Client/AzInfoProtection_UL_Preview_MSI_for_central_deployment.msi"
+>>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
         #     DependsOn = '[Computer]JoinDomain'
 		# }
 		# xMsiPackage InstallAipClient
