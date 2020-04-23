@@ -318,7 +318,7 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://raw.githubusercontent.com/microsoft/DefendTheFlag/master/Nested/VNetConfiguration.json",
+          "uri": "https://raw.githubusercontent.com/humestc/DefendTheFlag/master/Nested/VNetConfiguration.json",
           "contentVersion": "1.0.0.0"
         },
         "parameters": {

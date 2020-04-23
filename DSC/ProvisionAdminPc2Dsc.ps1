@@ -549,11 +549,7 @@ Configuration SetupAdminPc2
         # xRemoteFile DownloadAipClient
 		# {
 		# 	DestinationPath = 'C:\LabData\aip_client.msi'
-<<<<<<< HEAD
 		# 	Uri = "https://github.com/humestc/DefendTheFlag/raw/$Branch/Downloads/AIP/Client/AzInfoProtection_UL_Preview_MSI_for_central_deployment.msi"
-=======
-		# 	Uri = "https://github.com/humestc/DefendTheFlag/raw/master/Downloads/AIP/Client/AzInfoProtection_UL_Preview_MSI_for_central_deployment.msi"
->>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
         #     DependsOn = '[Computer]JoinDomain'
 		# }
 		# xMsiPackage InstallAipClient
@@ -570,22 +566,14 @@ Configuration SetupAdminPc2
         xRemoteFile GetAipData
         {
             DestinationPath = 'C:\PII\data.zip'
-<<<<<<< HEAD
             Uri = "https://github.com/humestc/DefendTheFlag/raw/$Branch/Downloads/AIP/docs.zip"
-=======
-            Uri = "https://github.com/humestc/DefendTheFlag/raw/master/Downloads/AIP/docs.zip"
->>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
             DependsOn = @('[Computer]JoinDomain','[Registry]SchUseStrongCrypto','[Registry]SchUseStrongCrypto64')
         }
         
         xRemoteFile GetAipScripts
         {
             DestinationPath = 'C:\Scripts\Scripts.zip'
-<<<<<<< HEAD
             Uri = "https://github.com/humestc/DefendTheFlag/raw/$Branch/Downloads/AIP/Scripts.zip"
-=======
-            Uri = "https://github.com/humestc/DefendTheFlag/raw/master/Downloads/AIP/Scripts.zip"
->>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
             DependsOn = @('[Computer]JoinDomain','[Registry]SchUseStrongCrypto','[Registry]SchUseStrongCrypto64')
         }
 
