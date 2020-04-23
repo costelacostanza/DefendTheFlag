@@ -210,11 +210,7 @@ Configuration SetupVictimPc
         xRemoteFile DownloadBginfo
 		{
 			DestinationPath = 'C:\BgInfo\BgInfoConfig.bgi'
-<<<<<<< HEAD
 			Uri = "https://github.com/humestc/DefendTheFlag/raw/$Branch/Downloads/BgInfo/victimpc.bgi"
-=======
-			Uri = "https://github.com/humestc/DefendTheFlag/raw/master/Downloads/BgInfo/victimpc.bgi"
->>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
             DependsOn = '[Computer]JoinDomain'
 		}
         
@@ -471,11 +467,7 @@ Configuration SetupVictimPc
         xRemoteFile GetCtfA
         {
             DestinationPath = 'C:\LabScripts\Backup\ctf-a.zip'
-<<<<<<< HEAD
             Uri = "https://github.com/humestc/DefendTheFlag/blob/$Branch/Downloads/AATP/ctf-a.zip?raw=true"
-=======
-            Uri = "https://github.com/humestc/DefendTheFlag/blob/master/Downloads/AATP/ctf-a.zip?raw=true"
->>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
             DependsOn = '[Computer]JoinDomain'
         }
         Archive UnzipCtfA
@@ -490,11 +482,7 @@ Configuration SetupVictimPc
         xRemoteFile GetAatpSaPlaybook
         {
             DestinationPath = 'C:\LabScripts\Backup\aatpsaplaybook.zip'
-<<<<<<< HEAD
             Uri = "https://github.com/humestc/DefendTheFlag/blob/$Branch/Downloads/AATP/aatpsaplaybook.zip?raw=true"
-=======
-            Uri = "https://github.com/humestc/DefendTheFlag/blob/master/Downloads/AATP/aatpsaplaybook.zip?raw=true"
->>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
             DependsOn = '[Computer]JoinDomain'
         }
 
@@ -521,11 +509,7 @@ Configuration SetupVictimPc
         # xRemoteFile DownloadAipClient
 		# {
 		# 	DestinationPath = 'C:\LabData\aip_client.msi'
-<<<<<<< HEAD
 		# 	Uri = "https://github.com/humestc/DefendTheFlag/raw/$Branch/Downloads/AIP/Client/AzInfoProtection_UL_Preview_MSI_for_central_deployment.msi"
-=======
-		# 	Uri = "https://github.com/humestc/DefendTheFlag/raw/master/Downloads/AIP/Client/AzInfoProtection_UL_Preview_MSI_for_central_deployment.msi"
->>>>>>> a5d48bbef761efafd51fa7823f5d08d6f86068b9
         #     DependsOn = '[Computer]JoinDomain'
 		# }
 		# xMsiPackage InstallAipClient
