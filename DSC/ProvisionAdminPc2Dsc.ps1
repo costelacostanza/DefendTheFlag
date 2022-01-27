@@ -53,7 +53,7 @@ Configuration SetupAdminPc2
     Import-DscResource -ModuleName ComputerManagementDsc -ModuleVersion 6.5.0.0
     Import-DscResource -ModuleName NetworkingDsc -ModuleVersion 7.4.0.0
     Import-DscResource -ModuleName xSystemSecurity -ModuleVersion 1.4.0.0
-    Import-DscResource -ModuleName cChoco -ModuleVersion 2.4.0.0
+    Import-DscResource -ModuleName cChoco -ModuleVersion 2.5.0.0
     Import-DscResource -ModuleName xPendingReboot -ModuleVersion 0.4.0.0
 
     [PSCredential]$Creds = New-Object System.Management.Automation.PSCredential ("${NetBiosName}\$($AdminCred.UserName)", $AdminCred.Password)

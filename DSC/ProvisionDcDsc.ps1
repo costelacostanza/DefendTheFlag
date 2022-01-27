@@ -58,7 +58,7 @@ Configuration CreateADForest
     Import-DscResource -ModuleName ComputerManagementDsc -ModuleVersion 6.5.0.0
     Import-DscResource -ModuleName NetworkingDsc -ModuleVersion 7.4.0.0
     Import-DscResource -ModuleName xSystemSecurity -ModuleVersion 1.4.0.0
-    Import-DscResource -ModuleName cChoco -ModuleVersion 2.4.0.0
+    Import-DscResource -ModuleName cChoco -ModuleVersion 2.5.0.0
 	Import-DscResource -ModuleName xPendingReboot -ModuleVersion 0.4.0.0
 
 	$Interface=Get-NetAdapter | Where-Object Name -Like "Ethernet*"|Select-Object -First 1
@@ -206,35 +206,35 @@ Configuration CreateADForest
 
 		#region cChoco
 
-		cChocoInstaller InstallChoco
-        {
-			InstallDir = 'C:\choco'
-			DependsOn = @('[xADForestProperties]ForestProps', '[xWaitForADDomain]DscForestWait')
-		}
+		# cChocoInstaller InstallChoco
+        # {
+		# 	InstallDir = 'C:\Choco'
+		# 	DependsOn = @('[xADForestProperties]ForestProps', '[xWaitForADDomain]DscForestWait')
+		# }
 		
-        cChocoPackageInstaller EdgeBrowser
-        {
-            Name = 'microsoft-edge'
-            Ensure = 'Present'
-            AutoUpgrade = $true
-            DependsOn = '[cChocoInstaller]InstallChoco'
-        }
+        # cChocoPackageInstaller EdgeBrowser
+        # {
+        #     Name = 'microsoft-edge'
+        #     Ensure = 'Present'
+        #     AutoUpgrade = $true
+        #     DependsOn = '[cChocoInstaller]InstallChoco'
+        # }
 		
-		cChocoPackageInstaller WindowsTerminal
-        {
-            Name = 'microsoft-windows-terminal'
-            Ensure = 'Present'
-            AutoUpgrade = $true
-            DependsOn = '[cChocoInstaller]InstallChoco'
-        }
+		# cChocoPackageInstaller WindowsTerminal
+        # {
+        #     Name = 'microsoft-windows-terminal'
+        #     Ensure = 'Present'
+        #     AutoUpgrade = $true
+        #     DependsOn = '[cChocoInstaller]InstallChoco'
+        # }
 
-        cChocoPackageInstaller InstallSysInternals
-        {
-            Name = 'sysinternals'
-			Ensure = 'Present'
-			AutoUpgrade = $false
-            DependsOn = '[cChocoInstaller]InstallChoco'
-		}
+        # cChocoPackageInstaller InstallSysInternals
+        # {
+        #     Name = 'sysinternals'
+		# 	Ensure = 'Present'
+		# 	AutoUpgrade = $false
+        #     DependsOn = '[cChocoInstaller]InstallChoco'
+		# }
 		#endegion
 	
 		xRemoteFile DownloadBginfo
